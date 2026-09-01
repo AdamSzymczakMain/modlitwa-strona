@@ -4,16 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Modlitwa — blokada aplikacji, które kradną Ci czas</title>
-<meta name="description" content="Blokuje wybrane aplikacje, dopóki się nie pomodlisz. Modlitewnik offline z 26 modlitwami, słowo na dziś, passa. Za darmo na Androida.">
+<meta name="description" content="Blokuje wybrane aplikacje, dopóki się nie pomodlisz. Modlitewnik offline, słowo na dziś, passa modlitewna. Za darmo na Androida.">
 <meta property="og:title" content="Modlitwa — blokada aplikacji">
 <meta property="og:description" content="Zanim otworzysz aplikację, która kradnie Ci czas — poświęć minutę na modlitwę.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://modlitwa.app/">
-<meta property="og:image" content="https://modlitwa.app/img/icon_512.png">
-<meta property="og:image:width" content="512">
-<meta property="og:image:height" content="512">
+<meta property="og:image" content="https://modlitwa.app/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Modlitwa — zatrzymaj się na chwilę. Blokuje apki, dopóki się nie pomodlisz.">
+<meta property="og:site_name" content="Modlitwa">
 <meta property="og:locale" content="pl_PL">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FAF7F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12132C" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://modlitwa.app/">
 <link rel="icon" href="img/icon_512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,165 +33,291 @@
   "applicationCategory": "LifestyleApplication",
   "inLanguage": "pl",
   "url": "https://modlitwa.app/",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dschema",
+  "isAccessibleForFree": true,
   "author": { "@type": "Organization", "name": "Dev AS Company" },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PLN" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "pl",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Czy aplikacja czyta mój ekran?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie. Sprawdzamy wyłącznie nazwę aplikacji, która jest na wierzchu — na przykład com.instagram.android. Treści ekranu system technicznie nam nie udostępnia, bo o taki dostęp nie prosimy. Nie odczytujemy też wpisywanego tekstu ani haseł." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy działa bez internetu?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tak. Modlitwy, słowo na dziś i cała blokada działają offline. Sieć jest potrzebna do obsługi zakupu Plusa, sprawdzenia jego stanu i systemowego okna oceny w Google Play." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy moje intencje gdzieś trafiają?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie. Intencje, ustawienia, passa i lista blokowanych aplikacji zostają na telefonie i nigdy go nie opuszczają. Nie ma kont, reklam ani analityki. Odinstalowanie aplikacji usuwa te dane. Jedyne, co aplikacja wysyła, to zapytanie do RevenueCat o to, czy masz wykupionego Plusa — z losowym identyfikatorem i danymi technicznymi telefonu, bez Twoich treści." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ile trwa modlitwa przed odblokowaniem?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tyle, ile zajmuje przeczytanie modlitwy dnia — zwykle kilkadziesiąt sekund. Możesz też wybrać tryb pisania własnej intencji, który wymaga chwili uwagi." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy muszę płacić?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie. Blokowanie aplikacji, modlitewnik, słowo na dziś i passa są bezpłatne bez ograniczeń czasowych. Plus jest dodatkiem, nie warunkiem korzystania." }
+    }
+  ]
 }
 </script>
 </head>
 <body>
 
-<div class="wrap">
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="i-krzyz" viewBox="0 0 100 100">
+    <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".5"
+      d="M77 50h14M73.4 36.5l12.1-7M63.5 26.6l7-12.1M50 23V9M36.5 26.6l-7-12.1M26.6 36.5l-12.1-7M23 50H9M26.6 63.5l-12.1 7M36.5 73.4l-7 12.1M50 77v14M63.5 73.4l7 12.1M73.4 63.5l12.1 7"/>
+    <path fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" d="M50 31v40M38.5 44.5h23"/>
+  </symbol>
+  <symbol id="i-tarcza" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.8l7.2 2.9v5.4c0 4.4-3 8.3-7.2 10.1-4.2-1.8-7.2-5.7-7.2-10.1V5.7L12 2.8z"/>
+      <path d="M9.2 11.9l2 2 3.6-3.9"/>
+    </g>
+  </symbol>
+  <symbol id="i-ksiega" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 6.6C10.4 5.3 8 4.6 4.4 4.8v13c3.6-.2 6 .5 7.6 1.8 1.6-1.3 4-2 7.6-1.8v-13c-3.6-.2-6 .5-7.6 1.8z"/>
+      <path d="M12 6.6v13"/>
+    </g>
+  </symbol>
+  <symbol id="i-slowo" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6.5 3h7.2l4.8 4.8V21h-12z"/>
+      <path d="M13.5 3v5h5"/>
+      <path d="M9.5 12.6h5.5M9.5 16.3h4"/>
+    </g>
+  </symbol>
+  <symbol id="i-passa" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+      d="M12 2.6c3.4 3.2 5.1 6 5.1 8.6a5.1 5.1 0 0 1-10.2 0c0-1.4.4-2.6 1.2-3.7.2 1.1.9 1.9 1.8 2.3.2-3.1.9-5.4 2.1-7.2z"/>
+  </symbol>
+  <symbol id="i-dzwonek" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18.2 16.4V11a6.2 6.2 0 1 0-12.4 0v5.4L4 18.4h16z"/>
+      <path d="M10 21.2a2.2 2.2 0 0 0 4 0"/>
+    </g>
+  </symbol>
+</svg>
 
-  <header class="hero">
-    <img class="ikona" src="img/icon_512.png" alt="Ikona aplikacji Modlitwa" width="104" height="104">
-    <h1>Zatrzymaj się na chwilę</h1>
-    <p class="lead">Modlitwa blokuje wybrane przez Ciebie aplikacje, dopóki nie poświęcisz minuty na modlitwę.</p>
-    <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa">Pobierz z Google Play</a>
-    <p class="cta-sub">Android 8.0 lub nowszy · bez kont · bez reklam</p>
-  </header>
+<a class="pomin" href="#tresc">Przejdź do treści</a>
 
-  <section>
-    <div class="problem">
+<header class="pasek">
+  <div class="pasek-w">
+    <a class="znak" href="/">
+      <img src="img/icon_512.png" alt="" width="30" height="30">
+      Modlitwa
+    </a>
+    <a class="cta maly" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dpasek">Pobierz</a>
+  </div>
+</header>
+
+<main id="tresc">
+
+  <section class="sztandar">
+    <div class="wrap-szeroki sztandar-siatka">
+      <div class="sztandar-tresc">
+        <p class="marka">Aplikacja na Androida</p>
+        <h1>Blokuje aplikacje, dopóki się nie pomodlisz</h1>
+        <p class="lead">Wybierasz, co Cię pochłania — Instagram, TikTok, YouTube. Zanim to otworzysz, pojawia się zaproszenie do krótkiej modlitwy. Dopiero potem masz dostęp.</p>
+        <div class="sztandar-akcja">
+          <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dhero">Pobierz z Google Play</a>
+          <p class="cta-sub">Za darmo · tylko Android 8.0 lub nowszy · bez kont, bez reklam</p>
+        </div>
+      </div>
+
+      <div class="telefon" role="img" aria-label="Ekran blokady w aplikacji: Zatrzymaj się na chwilę, z przyciskiem Pomódl się, aby odblokować">
+        <div class="ekran" aria-hidden="true">
+          <svg class="krzyz"><use href="#i-krzyz"></use></svg>
+          <p class="ekran-tytul">Zatrzymaj się na chwilę</p>
+          <p class="ekran-opis">Ta aplikacja jest zablokowana, dopóki nie poświęcisz chwili na modlitwę.</p>
+          <div class="ekran-guzik">Pomódl się, aby odblokować</div>
+          <p class="ekran-wyjscie">Wyjdź</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pas noc">
+    <div class="wrap">
       <h2>Znasz to</h2>
-      <p>Sięgasz po telefon, żeby sprawdzić godzinę. Odkładasz go czterdzieści minut później i nie umiesz powiedzieć, co się w międzyczasie stało.</p>
+      <p class="wiodacy">Sięgasz po telefon, żeby sprawdzić godzinę. Odkładasz go czterdzieści minut później i nie umiesz powiedzieć, co się w międzyczasie stało.</p>
       <p>Postanowienie, że dziś będzie inaczej, wytrzymuje do pierwszego odruchu. Bo odruch nie pyta o pozwolenie — po prostu otwiera aplikację.</p>
       <p><strong>Modlitwa wchodzi dokładnie w ten moment.</strong> Nie zabiera Ci telefonu. Wstawia jedną chwilę między odruch a ekran.</p>
     </div>
   </section>
 
-  <section>
-    <h2>Jak to działa</h2>
-    <div class="kroki">
-      <div class="krok">
-        <span class="n">1</span>
-        <div>
+  <section class="pas">
+    <div class="wrap-szeroki">
+      <h2>Jak to działa</h2>
+      <div class="kroki">
+        <div class="krok">
+          <span class="n">1</span>
           <h3>Wybierasz aplikacje</h3>
           <p>Media społecznościowe, gry — cokolwiek Cię pochłania.</p>
         </div>
-      </div>
-      <div class="krok">
-        <span class="n">2</span>
-        <div>
+        <div class="krok">
+          <span class="n">2</span>
           <h3>Próbujesz je otworzyć</h3>
           <p>Zamiast nich pojawia się zaproszenie do modlitwy.</p>
         </div>
-      </div>
-      <div class="krok">
-        <span class="n">3</span>
-        <div>
+        <div class="krok">
+          <span class="n">3</span>
           <h3>Modlisz się — i masz dostęp</h3>
-          <p>Po modlitwie aplikacje są odblokowane do północy albo na wybrany czas.</p>
+          <p>Po modlitwie aplikacje są odblokowane do północy. W Plusie wybierasz krótsze okno — 15 minut, godzinę albo trzy.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Jak wygląda</h2>
-    <div class="zrzuty">
-      <img src="img/screenshot_1.png" alt="Ekran modlitwy z tekstem i przyciskiem Amen" loading="lazy">
-      <img src="img/screenshot_2.png" alt="Zablokowana aplikacja i zaproszenie do modlitwy" loading="lazy">
-      <img src="img/screenshot_3.png" alt="Słowo na dziś i passa modlitewna" loading="lazy">
+  <section class="pas tint">
+    <div class="wrap-szeroki">
+      <h2>Jak wygląda</h2>
+      <div class="zrzuty">
+        <img src="img/screenshot_1.webp" alt="Ekran modlitwy z tekstem i przyciskiem Amen" width="540" height="960" loading="lazy" decoding="async">
+        <img src="img/screenshot_2.webp" alt="Zablokowana aplikacja i zaproszenie do modlitwy" width="540" height="960" loading="lazy" decoding="async">
+        <img src="img/screenshot_3.webp" alt="Słowo na dziś i passa modlitewna" width="540" height="960" loading="lazy" decoding="async">
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>Co dostajesz za darmo</h2>
-    <p><strong>Blokowanie aplikacji</strong> — dowolnych, które sam wskażesz.</p>
-    <p><strong>Modlitewnik offline</strong> — 26 modlitw: pacierz, różaniec z tajemnicami, pełna Koronka do Miłosierdzia Bożego, akty, modlitwy poranne i wieczorne. Wszystko działa bez internetu.</p>
-    <p><strong>Słowo na dziś</strong> — krótki fragment Pisma Świętego na każdy dzień.</p>
-    <p><strong>Passa</strong> — ile dni z rzędu udało Ci się zatrzymać na modlitwę.</p>
-    <p><strong>Twoje intencje</strong> — zapisujesz własnymi słowami, zostają na telefonie.</p>
-  </section>
-
-  <section class="zacheta">
-    <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa">Pobierz z Google Play</a>
-    <p class="cta-sub">Za darmo · Android 8.0 lub nowszy</p>
-  </section>
-
-  <section>
-    <div class="szczery darmo">
-      <h2>Modlitwa jest za darmo</h2>
-      <p>Wszystko powyżej jest i pozostanie bezpłatne. Nie sprzedajemy modlitwy.</p>
-      <p>Opcjonalny <strong>Modlitwa Plus</strong> dokłada mocniejsze narzędzia samokontroli: krótkie okna dostępu zamiast odblokowania do północy, harmonogramy, natychmiastową blokadę, Tryb Mszy i tryb „napisz intencję".</p>
-      <div class="ceny">
-        <div class="cena polecane">
-          <span class="et">Polecane</span>
-          <span class="kw">219,99 zł</span>
-          <span class="za">raz, na zawsze</span>
+  <section class="pas">
+    <div class="wrap-szeroki">
+      <h2>Co dostajesz za darmo</h2>
+      <div class="dary">
+        <div class="dar">
+          <svg class="ikonka" aria-hidden="true"><use href="#i-tarcza"></use></svg>
+          <h3>Blokowanie aplikacji</h3>
+          <p>Dowolnych, które sam wskażesz.</p>
         </div>
-        <div class="cena">
-          <span class="et">Rocznie</span>
-          <span class="kw">60,99 zł</span>
-          <span class="za">7 dni za darmo</span>
+        <div class="dar szeroki">
+          <svg class="ikonka" aria-hidden="true"><use href="#i-ksiega"></use></svg>
+          <h3>Modlitewnik offline</h3>
+          <p>22 modlitwy: pacierz, akty, modlitwy poranne i wieczorne, modlitwy maryjne, plus rozpiski różańca i Koronki do Miłosierdzia Bożego. Wszystko działa bez internetu.</p>
         </div>
-        <div class="cena">
-          <span class="et">Miesięcznie</span>
-          <span class="kw">11,99 zł</span>
-          <span class="za">anulujesz kiedy chcesz</span>
+        <div class="dar">
+          <svg class="ikonka" aria-hidden="true"><use href="#i-slowo"></use></svg>
+          <h3>Słowo na dziś</h3>
+          <p>Krótki fragment Pisma Świętego na każdy dzień.</p>
+        </div>
+        <div class="dar">
+          <svg class="ikonka" aria-hidden="true"><use href="#i-passa"></use></svg>
+          <h3>Passa</h3>
+          <p>Ile dni z rzędu udało Ci się zatrzymać na modlitwę.</p>
+        </div>
+        <div class="dar">
+          <svg class="ikonka" aria-hidden="true"><use href="#i-dzwonek"></use></svg>
+          <h3>Codzienne zaproszenie</h3>
+          <p>Powiadomienie o wybranej porze, domyślnie w południe na Anioł Pański.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="szczery">
-      <h2>Czego aplikacja nie zrobi</h2>
-      <p>Blokada opiera się na usłudze dostępności Androida. Jeśli wyłączysz ją w ustawieniach telefonu albo użyjesz „wymuś zatrzymanie" lub „wyczyść pamięć", ochrona przestanie działać do czasu, aż włączysz ją z powrotem — na telefonach Samsung system usuwa wtedy całe uprawnienie.</p>
-      <p>Aplikacja pokaże wprost, że nie pilnuje, i nie będzie udawać, że potrafi się temu przeciwstawić.</p>
-      <p><strong>Modlitwa ma wspierać Twoje postanowienie, nie zastępować go.</strong></p>
+  <section class="pas zloto">
+    <div class="wrap zacheta">
+      <svg class="krzyz" aria-hidden="true"><use href="#i-krzyz"></use></svg>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dsrodek">Pobierz z Google Play</a>
+      <p class="cta-sub">Za darmo · tylko Android 8.0 lub nowszy</p>
     </div>
   </section>
 
-  <section>
-    <h2>Pytania</h2>
-
-    <details>
-      <summary>Czy aplikacja czyta mój ekran?</summary>
-      <p>Nie. Sprawdzamy wyłącznie nazwę aplikacji, która jest na wierzchu — na przykład <code>com.instagram.android</code>. Treści ekranu system technicznie nam nie udostępnia, bo o taki dostęp nie prosimy. Nie odczytujemy też wpisywanego tekstu ani haseł.</p>
-    </details>
-
-    <details>
-      <summary>Czy działa bez internetu?</summary>
-      <p>Tak. Modlitwy, słowo na dziś i cała blokada działają offline. Sieć jest potrzebna wyłącznie do obsługi zakupu Plusa i sprawdzenia jego stanu.</p>
-    </details>
-
-    <details>
-      <summary>Czy moje intencje gdzieś trafiają?</summary>
-      <p>Nie. Intencje, ustawienia, passa i lista blokowanych aplikacji zostają na telefonie i nigdy go nie opuszczają. Nie ma kont, reklam ani analityki. Odinstalowanie aplikacji usuwa te dane.</p>
-    </details>
-
-    <details>
-      <summary>Da się to obejść?</summary>
-      <p>Tak — i mówimy o tym wprost. Wystarczy wyłączyć usługę dostępności w ustawieniach telefonu. Aplikacja natychmiast pokaże, że nie pilnuje. To narzędzie do wspierania postanowienia, nie kajdany.</p>
-    </details>
-
-    <details>
-      <summary>Ile trwa modlitwa przed odblokowaniem?</summary>
-      <p>Tyle, ile zajmuje przeczytanie modlitwy dnia — zwykle kilkadziesiąt sekund. Możesz też wybrać tryb pisania własnej intencji, który wymaga chwili uwagi.</p>
-    </details>
-
-    <details>
-      <summary>Czy muszę płacić?</summary>
-      <p>Nie. Blokowanie aplikacji, modlitewnik, słowo na dziś i passa są bezpłatne bez ograniczeń czasowych. Plus jest dodatkiem, nie warunkiem korzystania.</p>
-    </details>
+  <section class="pas">
+    <div class="wrap">
+      <div class="szczery">
+        <h2>Czego aplikacja nie zrobi</h2>
+        <p>Blokada opiera się na usłudze dostępności Androida. Jeśli wyłączysz ją w ustawieniach telefonu albo użyjesz „wymuś zatrzymanie” lub „wyczyść pamięć”, ochrona przestanie działać do czasu, aż włączysz ją z powrotem — na telefonach Samsung system usuwa wtedy całe uprawnienie.</p>
+        <p>Aplikacja pokaże wprost, że nie pilnuje, i nie będzie udawać, że potrafi się temu przeciwstawić.</p>
+        <p><strong>Modlitwa ma wspierać Twoje postanowienie, nie zastępować go.</strong></p>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <div class="koniec">
+  <section class="pas">
+    <div class="wrap">
+      <div class="szczery darmo">
+        <h2>Modlitwa jest za darmo</h2>
+        <p>Wszystko powyżej jest i pozostanie bezpłatne. Nie sprzedajemy modlitwy.</p>
+        <p>Opcjonalny <strong>Modlitwa Plus</strong> dokłada mocniejsze narzędzia samokontroli: krótkie okna dostępu zamiast odblokowania do północy, harmonogramy, natychmiastową blokadę, Tryb Mszy i tryb „napisz intencję”. Kosztuje od 11,99 zł miesięcznie, a wszystkie warianty i ceny zobaczysz w aplikacji, zanim cokolwiek zapłacisz.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pas tint">
+    <div class="wrap">
+      <h2>Pytania</h2>
+      <div class="pytania">
+
+        <details>
+          <summary>Czy aplikacja czyta mój ekran?</summary>
+          <div class="odp">
+            <p>Nie. Sprawdzamy wyłącznie nazwę aplikacji, która jest na wierzchu — na przykład <code>com.instagram.android</code>. Treści ekranu system technicznie nam nie udostępnia, bo o taki dostęp nie prosimy. Nie odczytujemy też wpisywanego tekstu ani haseł.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Czy działa bez internetu?</summary>
+          <div class="odp">
+            <p>Tak. Modlitwy, słowo na dziś i cała blokada działają offline. Sieć jest potrzebna do obsługi zakupu Plusa, sprawdzenia jego stanu i systemowego okna oceny w Google Play.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Czy moje intencje gdzieś trafiają?</summary>
+          <div class="odp">
+            <p>Nie. Intencje, ustawienia, passa i lista blokowanych aplikacji zostają na telefonie i nigdy go nie opuszczają. Nie ma kont, reklam ani analityki. Odinstalowanie aplikacji usuwa te dane.</p>
+            <p>Jedyne, co aplikacja wysyła, to zapytanie do <strong>RevenueCat</strong> o to, czy masz wykupionego Plusa — z losowym identyfikatorem i danymi technicznymi telefonu, bez Twoich treści. Opisuje to <a href="prywatnosc.html">polityka prywatności</a>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Ile trwa modlitwa przed odblokowaniem?</summary>
+          <div class="odp">
+            <p>Tyle, ile zajmuje przeczytanie modlitwy dnia — zwykle kilkadziesiąt sekund. Możesz też wybrać tryb pisania własnej intencji, który wymaga chwili uwagi.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Czy muszę płacić?</summary>
+          <div class="odp">
+            <p>Nie. Blokowanie aplikacji, modlitewnik, słowo na dziś i passa są bezpłatne bez ograniczeń czasowych. Plus jest dodatkiem, nie warunkiem korzystania.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pas noc">
+    <div class="wrap koniec">
+      <svg class="krzyz" aria-hidden="true"><use href="#i-krzyz"></use></svg>
       <h2>Zatrzymaj się na chwilę</h2>
       <p>Za darmo, bez kont, bez reklam.</p>
-      <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa">Pobierz z Google Play</a>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dstopka">Pobierz z Google Play</a>
     </div>
   </section>
 
+</main>
+
+<div class="wrap">
   <footer>
     <span>Dev AS Company</span>
     <a href="prywatnosc.html">Polityka prywatności</a>
     <a href="mailto:devas.app.company@gmail.com">Kontakt</a>
   </footer>
-
 </div>
 
 </body>
