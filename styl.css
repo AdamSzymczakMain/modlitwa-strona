@@ -120,6 +120,7 @@ a { color: var(--gold); }
   color: var(--gold);
   line-height: 1;
   padding-top: 3px;
+  font-variant-numeric: lining-nums;
 }
 .krok h3 { margin: 0 0 4px; font-size: 21px; }
 .krok p { margin: 0; }
@@ -199,3 +200,67 @@ footer {
 }
 footer a { color: var(--ink-faint); }
 .wroc { display: inline-block; margin-bottom: 26px; font-size: 15px; }
+
+
+/* ---- problem ---- */
+.problem {
+  background: var(--ink);
+  color: var(--ground);
+  border-radius: 4px;
+  padding: 38px 34px;
+  margin: 0;
+}
+.problem h2 { color: var(--ground); margin-top: 0; }
+.problem p { color: rgba(250, 247, 240, 0.82); font-size: 18px; }
+.problem p:last-child { margin-bottom: 0; }
+.problem strong { color: var(--ground); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .problem { background: var(--surface); color: var(--ink); }
+  :root:not([data-theme="light"]) .problem h2 { color: var(--ink); }
+  :root:not([data-theme="light"]) .problem p { color: var(--ink-soft); }
+  :root:not([data-theme="light"]) .problem strong { color: var(--ink); }
+}
+
+/* ---- cennik ---- */
+.ceny { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0 8px; }
+.cena {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 16px 14px;
+  background: var(--surface);
+  text-align: center;
+}
+.cena.polecane { border-color: var(--gold); border-width: 2px; }
+.cena .kw { font-family: var(--display); font-size: 26px; font-weight: 600; display: block; font-variant-numeric: lining-nums; }
+.cena .za { font-size: 13.5px; color: var(--ink-faint); display: block; margin-top: 2px; }
+.cena .et {
+  font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600; display: block; margin-bottom: 6px;
+}
+@media (max-width: 32rem) { .ceny { grid-template-columns: 1fr; } }
+
+/* ---- FAQ ---- */
+details {
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 0;
+}
+details[open] summary { color: var(--gold); }
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: baseline;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--gold); font-size: 20px; line-height: 1; }
+details[open] summary::after { content: "3"; }
+summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+details p { margin: 12px 0 2px; font-size: 15.5px; }
+
+/* ---- domknięcie ---- */
+.koniec { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.koniec h2 { margin-bottom: 0; }
