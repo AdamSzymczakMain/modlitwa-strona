@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności — Modlitwa</title>
+<meta name="description" content="Polityka prywatności aplikacji Modlitwa: dane lokalne, usluga dostepnosci, platnosci, podmioty trzecie.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="img/icon_512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<div class="wrap doc">
+<a class="wroc" href="./">← Modlitwa</a>
+<h1>Polityka prywatności — Modlitwa</h1>
+<p><strong>Ostatnia aktualizacja: 26 sierpnia 2026</strong></p>
+<h2>W skrócie</h2>
+<p>Aplikacja <strong>Modlitwa</strong> nie zakłada kont i nie prowadzi analityki ani śledzenia w celach reklamowych. Dzielimy dane na dwie grupy opisane osobno niżej: <strong>dane lokalne</strong> (modlitwy, intencje, ustawienia, lista blokowanych aplikacji, stan Plusa w pamięci podręcznej), które zostają wyłącznie na telefonie, oraz <strong>dane przekazywane przy korzystaniu z Modlitwa Plus i systemowych funkcji Google Play</strong> — obsługę zakupu i płatności prowadzi Google Play, stan zakupu rozlicza dla nas <strong>RevenueCat</strong>, a systemowe okno oceny aplikacji (<strong>In-App Review</strong>) obsługuje bezpośrednio Google Play.</p>
+<h2>Dane lokalne</h2>
+<p>Wszystkie poniższe dane są zapisywane <strong>wyłącznie w pamięci Twojego urządzenia</strong> i nigdy nie opuszczają telefonu:</p>
+<div class="tw"><table><thead><tr><th>Dane</th><th>Po co</th></tr></thead><tbody><tr><td>Lista aplikacji, które wybrałeś do blokowania</td><td>żeby wiedzieć, kiedy zaprosić Cię do modlitwy</td></tr><tr><td>Godzina, do której blokada jest zdjęta</td><td>żeby nie pytać ponownie zaraz po modlitwie</td></tr><tr><td>Passa i liczba modlitw</td><td>żeby pokazać Twój postęp</td></tr><tr><td>Ustawienia (sposób i czas modlitwy, przypomnienie)</td><td>żeby aplikacja działała po Twojemu</td></tr><tr><td>Treść intencji wpisanych w trybie „Napisz intencję"</td><td>zapisywane w historii („Moje intencje"), żebyś mógł do nich wrócić; <strong>wyłącznie na Twoim urządzeniu, nigdy nigdzie nie wysyłane</strong>. Możesz usunąć pojedynczą intencję albo całą historię jednym przyciskiem</td></tr><tr><td>Stan Modlitwa Plus w pamięci podręcznej (aktywny/nieaktywny) oraz <strong>czas ostatniej weryfikacji</strong></td><td>żeby wykupione funkcje działały także bez internetu</td></tr></tbody></table></div>
+<p>Standardowe odinstalowanie aplikacji usuwa te dane z urządzenia. Aplikacja ma też wyłączoną automatyczną kopię zapasową Androida (Android Auto Backup, <code>android:allowBackup="false"</code>), więc w typowym przypadku żadne z powyższych danych nie trafiają do kopii zapasowej Twojego konta Google. Nie gwarantujemy tego zachowania dla niestandardowych wariantów systemu przygotowanych przez producentów urządzeń (OEM) ani dla wszystkich metod migracji telefonu — to poza naszą kontrolą.</p>
+<h2>Usługa dostępności — co dokładnie robi</h2>
+<p>Aby zablokować wybrane aplikacje, Modlitwa korzysta z systemowej <strong>usługi dostępności</strong> (Accessibility Service). To uprawnienie brzmi poważnie, więc wyjaśniamy dokładnie:</p>
+<p><strong>Co robimy:</strong> sprawdzamy wyłącznie <strong>nazwę pakietu aplikacji, która jest aktualnie na wierzchu ekranu</strong> (np. <code>com.instagram.android</code>). Na tej podstawie decydujemy, czy pokazać ekran modlitwy.</p>
+<p><strong>Czego NIE robimy:</strong></p>
+<ul><li>nie odczytujemy treści Twojego ekranu — usługa ma ustawione <code>canRetrieveWindowContent="false"</code>, czyli system <strong>technicznie nie daje nam dostępu</strong> do zawartości okien;</li><li>nie odczytujemy tekstu, który wpisujesz, ani haseł;</li><li>nie wykonujemy gestów ani kliknięć za Ciebie;</li><li>nie zapisujemy historii tego, jakich aplikacji używasz;</li><li>nie wysyłamy nigdzie żadnej z tych informacji.</li></ul>
+<p>Usługa nasłuchuje wyłącznie zdarzenia zmiany aktywnego okna (<code>typeWindowStateChanged</code>) i nie prosi o żadne dodatkowe możliwości.</p>
+<h2>Pozostałe uprawnienia</h2>
+<div class="tw"><table><thead><tr><th>Uprawnienie</th><th>Do czego</th></tr></thead><tbody><tr><td>Wyświetlanie nad innymi aplikacjami</td><td>opcjonalna „natychmiastowa blokada" — nakładka przykrywająca zablokowaną aplikację od razu</td></tr><tr><td>Powiadomienia</td><td>dzienne zaproszenie do modlitwy i ostrzeżenie, gdy blokada przestanie działać</td></tr><tr><td>Uruchamianie po restarcie</td><td>przywrócenie zaplanowanych przypomnień po ponownym włączeniu telefonu</td></tr><tr><td>Dostęp do listy zainstalowanych aplikacji</td><td>żebyś mógł wybrać, co zablokować; lista jest tylko wyświetlana, nie jest nigdzie wysyłana</td></tr><tr><td>Dostęp do internetu</td><td>obsługa zakupu i sprawdzenie stanu Modlitwa Plus (Google Play + RevenueCat), otwarcie linku zarządzania subskrypcją oraz systemowe okno oceny aplikacji (In-App Review); treści aplikacji (modlitwy, wersety) są w niej zawarte i działają bez sieci</td></tr><tr><td>Płatności w Google Play</td><td>zakup i odtworzenie Modlitwa Plus</td></tr></tbody></table></div>
+<h2>Dane przekazywane przy zakupie</h2>
+<p>Modlitewnik, słowo na dziś i samo blokowanie aplikacji są <strong>darmowe na zawsze</strong>. Płatny <strong>Modlitwa Plus</strong> odblokowuje mocniejsze narzędzia samokontroli (krótkie okna dostępu, harmonogramy, natychmiastową blokadę, Tryb Mszy, tryb „napisz intencję").</p>
+<ul><li>Płatność w całości obsługuje <strong>Google Play</strong>. Nie widzimy i nie przechowujemy Twoich danych karty, adresu ani żadnych danych płatniczych — trafiają one wyłącznie do Google.</li><li>Nie zakładamy kont. Aplikacja nie wysyła do nas Twojego adresu e-mail ani identyfikatora konta Google.</li><li>Stan zakupu rozlicza dla nas <strong>RevenueCat</strong> (RevenueCat, Inc., USA). Szczegóły w sekcji „Podmioty trzecie".</li><li>Na Twoim urządzeniu przechowujemy w pamięci podręcznej stan Plusa (aktywny/nieaktywny) oraz <strong>czas ostatniej weryfikacji</strong>. Dzięki temu wykupione funkcje działają także bez internetu.</li><li>Aplikacja łączy się z siecią w kilku sytuacjach: przy starcie i przy odświeżaniu oferty lub stanu zakupu (RevenueCat), w trakcie zakupu i przywracania zakupów (<strong>odtworzenie</strong>) przez Google Play Billing, przy otwarciu linku zarządzania subskrypcją w Sklepie Play oraz gdy pojawi się systemowe okno oceny aplikacji (<strong>In-App Review</strong>) — patrz sekcja niżej. Rdzeń aplikacji (modlitwy, wersety) działa offline.</li><li>Do płatności stosuje się również <a href="https://policies.google.com/privacy" rel="noopener">polityka prywatności Google</a>. Subskrypcję anulujesz w Sklepie Play → <em>Płatności i subskrypcje</em>, albo bezpośrednio z linku na ekranie zakupu w aplikacji.</li></ul>
+<h3>Google Play In-App Review</h3>
+<p>Gdy aplikacja pokaże Ci systemowe okno oceny (<strong>In-App Review</strong>), ocena gwiazdkowa i ewentualna treść recenzji, którą wpiszesz, trafiają bezpośrednio do Google Play — nie do nas. W zależności od kanału publikacji recenzja może być publiczna albo widoczna wyłącznie deweloperowi. Więcej: <a href="https://developer.android.com/guide/playcore/in-app-review" rel="noopener">dokumentacja Google Play In-App Review</a>.</p>
+<h3>Udostępnianie („Poleć Modlitwę")</h3>
+<p>Funkcja „Poleć Modlitwę" otwiera natywny arkusz udostępniania systemu Android — to Ty wybierasz aplikację i odbiorcę, my nie widzimy ani nie wysyłamy tej treści nigdzie sami.</p>
+<h2>Dzieci</h2>
+<p>Aplikacja nie jest skierowana do dzieci poniżej 13. roku życia i nie zbiera świadomie ich danych.</p>
+<h2>Podmioty trzecie</h2>
+<p>Nie korzystamy z żadnych narzędzi analitycznych, reklamowych ani śledzących. Nie budujemy profili użytkowników i nie sprzedajemy nikomu żadnych danych.</p>
+<p>Korzystamy z dwóch podmiotów trzecich, obsługujących płatności oraz systemową ocenę aplikacji:</p>
+<p><strong>Google Play</strong> (Google Ireland Ltd.) — przeprowadza transakcję i pobiera pieniądze, obsługuje link zarządzania subskrypcją oraz systemowe okno In-App Review (ocena/treść recenzji). Obowiązuje <a href="https://policies.google.com/privacy" rel="noopener">polityka prywatności Google</a>.</p>
+<p><strong>RevenueCat</strong> (RevenueCat, Inc., USA) — sprawdza w Google Play, czy Twój zakup jest ważny, i odsyła aplikacji odpowiedź „Plus aktywny: tak/nie". Obowiązuje <a href="https://www.revenuecat.com/privacy" rel="noopener">polityka prywatności RevenueCat</a>.</p>
+<p>Co trafia do RevenueCat:</p>
+<div class="tw"><table><thead><tr><th>Dane</th><th>Uwagi</th></tr></thead><tbody><tr><td>Pseudonimowy identyfikator klienta</td><td>losowy ciąg tworzony przez RevenueCat, niepowiązany z Twoim imieniem, e-mailem ani kontem Google</td></tr><tr><td>Identyfikator kupionego produktu i status zakupu</td><td>np. „plus_yearly, aktywna do…"</td></tr><tr><td>Podstawowe dane techniczne urządzenia</td><td>model, wersja systemu, kraj sklepu, wersja aplikacji</td></tr></tbody></table></div>
+<p>Czego RevenueCat <strong>nie</strong> dostaje: Twoich intencji, listy blokowanych aplikacji, passy modlitewnej, danych karty ani adresu e-mail. Wymienione dane lokalne aplikacja nie przekazuje RevenueCat.</p>
+<p>Jeśli nigdy nie otworzysz ekranu zakupu i nie kupisz Plusa, aplikacja i tak nawiąże połączenie z RevenueCat przy starcie, żeby sprawdzić stan uprawnienia — wysyłany jest wtedy wyłącznie pseudonimowy identyfikator i dane techniczne wymienione wyżej.</p>
+<h2>Zmiany</h2>
+<p>Jeśli polityka się zmieni, zaktualizujemy datę na górze i opiszemy zmianę w opisie aktualizacji w Google Play.</p>
+<h2>Kontakt</h2>
+<p>W sprawach prywatności napisz: <strong>devas.app.company@gmail.com</strong></p>
+<p>Administrator danych: <strong>Dev AS Company</strong></p>
+<footer>
+  <span>Dev AS Company</span>
+  <a href="./">Strona główna</a>
+  <a href="mailto:devas.app.company@gmail.com">Kontakt</a>
+</footer>
+</div>
+</body>
+</html>
