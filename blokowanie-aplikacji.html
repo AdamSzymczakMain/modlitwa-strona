@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blokowanie aplikacji na Androidzie — jak zablokować apki</title>
+<meta name="description" content="Jak działa blokowanie aplikacji na Androidzie: Cyfrowa równowaga, tryb skupienia i usługa dostępności. Czego żadna blokada nie zrobi.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://modlitwa.app/blokowanie-aplikacji.html">
+<meta property="og:title" content="Blokowanie aplikacji na Androidzie — poradnik">
+<meta property="og:description" content="Trzy sposoby blokowania aplikacji na Androidzie, jak działa usługa dostępności i czego żadna blokada nie zrobi.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://modlitwa.app/blokowanie-aplikacji.html">
+<meta property="og:image" content="https://modlitwa.app/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Modlitwa">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FAF7F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12132C" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="img/icon_512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="styl.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Blokowanie aplikacji na Androidzie — jak zablokować apki",
+  "description": "Jak działa blokowanie aplikacji na Androidzie: Cyfrowa równowaga, tryb skupienia i blokady oparte na usłudze dostępności.",
+  "inLanguage": "pl",
+  "mainEntityOfPage": "https://modlitwa.app/blokowanie-aplikacji.html",
+  "image": "https://modlitwa.app/img/og.png",
+  "author": { "@type": "Organization", "name": "Dev AS Company" },
+  "publisher": { "@type": "Organization", "name": "Dev AS Company" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Modlitwa", "item": "https://modlitwa.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blokowanie aplikacji", "item": "https://modlitwa.app/blokowanie-aplikacji.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "pl",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Jak zablokować aplikacje na telefonie z Androidem?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Masz trzy drogi: wbudowana Cyfrowa równowaga z licznikami czasu, tryb skupienia, albo aplikacja zewnętrzna korzystająca z usługi dostępności. Pierwsze dwie są darmowe i systemowe, ale działają w dziennych limitach. Trzecia daje więcej kontroli nad tym, co dzieje się w momencie otwarcia aplikacji." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy blokowanie aplikacji wymaga uprawnień administratora?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie. Blokady dostępne w Google Play opierają się na usłudze dostępności, którą włączasz sam w ustawieniach telefonu. Nie wymagają roota ani uprawnień administratora urządzenia." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy da się zablokować aplikacje tak, żeby nie dało się tego obejść?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie na zwykłym, prywatnym telefonie. Właściciel urządzenia zawsze może wyłączyć usługę dostępności, użyć wymuszenia zatrzymania albo wyczyścić pamięć aplikacji. Blokada jest wsparciem dla postanowienia, a nie zamkiem, którego nie da się otworzyć." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy blokada aplikacji czyta zawartość ekranu?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Zależy od aplikacji. Usługa dostępności potrafi udostępnić dużo danych, ale aplikacja dostaje tylko to, o co poprosi w swojej konfiguracji. Blokada potrzebuje wyłącznie nazwy pakietu aplikacji na wierzchu, na przykład com.instagram.android. Warto sprawdzić w polityce prywatności, o jaki zakres prosi konkretny program." }
+    }
+  ]
+}
+</script>
+<script>
+  if ('IntersectionObserver' in window &&
+      !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.className += ' js';
+  }
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="i-krzyz" viewBox="0 0 100 100">
+    <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".5"
+      d="M77 50h14M73.4 36.5l12.1-7M63.5 26.6l7-12.1M50 23V9M36.5 26.6l-7-12.1M26.6 36.5l-12.1-7M23 50H9M26.6 63.5l-12.1 7M36.5 73.4l-7 12.1M50 77v14M63.5 73.4l7 12.1M73.4 63.5l12.1 7"/>
+    <path fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" d="M50 31v40M38.5 44.5h23"/>
+  </symbol>
+  <symbol id="i-play" viewBox="0 0 24 24">
+    <path fill="#00D3FF" d="M3.1 2.3c-.2.3-.3.7-.3 1.2v17c0 .5.1.9.3 1.2l.1.1 9.5-9.5v-.3L3.2 2.2l-.1.1z"/>
+    <path fill="#FFCE00" d="m15.9 15.6-3.3-3.3v-.3l3.3-3.3.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2-.1.1z"/>
+    <path fill="#FF3A44" d="m16 15.5-3.4-3.4-9.5 9.6c.4.4 1 .4 1.7.1L16 15.5z"/>
+    <path fill="#00E677" d="M16 8.7 4.8 2.4c-.7-.4-1.3-.3-1.7.1l9.5 9.5L16 8.7z"/>
+  </symbol>
+</svg>
+
+<div class="straznik" aria-hidden="true"></div>
+
+<header class="pasek">
+  <div class="pasek-w">
+    <a class="znak" href="./">
+      <img src="img/icon_512.png" alt="" width="30" height="30">
+      Modlitwa
+    </a>
+    <a class="cta maly" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dblokowanie%26utm_content%3Dpasek"><svg class="play" aria-hidden="true"><use href="#i-play"></use></svg>Pobierz</a>
+  </div>
+</header>
+
+<main>
+
+<div class="wrap doc">
+
+  <a class="wroc" href="./">← Modlitwa</a>
+
+  <h1>Blokowanie aplikacji na Androidzie</h1>
+  <p class="lead">Jak działają blokady aplikacji, czym różnią się od siebie i czego żadna z nich nie zrobi — nawet ta, którą sami zbudowaliśmy.</p>
+
+  <nav class="spis" aria-label="Spis treści">
+    <p class="spis-tytul">Na tej stronie</p>
+    <ul>
+      <li><a href="#dlaczego">Dlaczego samo postanowienie nie wystarcza</a></li>
+      <li><a href="#sposoby">Trzy sposoby blokowania aplikacji</a></li>
+      <li><a href="#dostepnosc">Jak działa blokada oparta na usłudze dostępności</a></li>
+      <li><a href="#granice">Czego żadna blokada na Androidzie nie zrobi</a></li>
+      <li><a href="#wybor">Jak wybrać rozwiązanie dla siebie</a></li>
+      <li><a href="#modlitwa">Blokowanie aplikacji a chwila modlitwy</a></li>
+      <li><a href="#pytania">Częste pytania</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="dlaczego">Dlaczego samo postanowienie nie wystarcza</h2>
+  <p>Sięgasz po telefon, żeby sprawdzić godzinę. Odkładasz go czterdzieści minut później i nie umiesz powiedzieć, co się w międzyczasie stało. Znasz to, bo tak działa nawyk: <strong>odruch nie pyta o pozwolenie</strong> — po prostu otwiera aplikację.</p>
+  <p>Blokowanie aplikacji nie jest więc walką z siłą woli. Jest wstawieniem przeszkody dokładnie w tym miejscu, w którym siła woli nie zdąża zadziałać — między odruchem a otwartym ekranem. Każda sensowna blokada robi jedno: <strong>wydłuża drogę do aplikacji o świadomą decyzję</strong>.</p>
+
+  <h2 id="sposoby">Trzy sposoby blokowania aplikacji</h2>
+
+  <h3>1. Cyfrowa równowaga — liczniki czasu wbudowane w system</h3>
+  <p>Nowsze Androidy mają wbudowaną <strong>Cyfrową równowagę</strong> (u Samsunga: <em>Cyfrowy dobrostan</em>). Znajdziesz ją w Ustawieniach. Pozwala ustawić dzienny licznik czasu dla wybranej aplikacji — po wyczerpaniu limitu ikona szarzeje, a aplikacja nie chce się otworzyć do północy.</p>
+  <p><strong>Plusy:</strong> nic nie instalujesz, nie oddajesz żadnych uprawnień, jest za darmo.<br>
+  <strong>Minusy:</strong> limit jest dzienny, więc pierwsze pół godziny „zniknie" tak samo bezmyślnie jak zawsze. Wyłączenie licznika to dwa dotknięcia w Ustawieniach.</p>
+
+  <h3>2. Tryb skupienia — pauza na żądanie</h3>
+  <p><strong>Tryb skupienia</strong> wstrzymuje wybrane aplikacje na czas, który sam wskażesz, albo według harmonogramu. Dobrze sprawdza się przy pracy i nauce, bo działa blokami, a nie limitem na cały dzień.</p>
+  <p>Nie myl go z trybem <em>Nie przeszkadzać</em> — ten wycisza powiadomienia, ale w niczym nie przeszkadza, gdy sam otworzysz aplikację.</p>
+
+  <h3>3. Aplikacje zewnętrzne oparte na usłudze dostępności</h3>
+  <p>Programy do blokowania aplikacji z Google Play korzystają z <strong>usługi dostępności</strong> Androida. Dzięki niej wiedzą, która aplikacja jest właśnie na wierzchu, i mogą zareagować w momencie jej otwarcia — pokazać własny ekran, poprosić o potwierdzenie, odliczyć czas albo poprowadzić przez krótkie zadanie.</p>
+  <p>To jedyna z trzech dróg, która pozwala zdecydować, <strong>co dzieje się w chwili sięgnięcia po aplikację</strong>. Systemowe liczniki potrafią tylko powiedzieć „nie".</p>
+
+  <h2 id="dostepnosc">Jak działa blokada oparta na usłudze dostępności</h2>
+  <p>Usługa dostępności powstała po to, by osoby z niepełnosprawnościami mogły obsługiwać telefon czytnikiem ekranu. Uprawnienie brzmi poważnie, bo w pełnym zakresie potrafi dużo — dlatego warto rozumieć, o co konkretnie prosi program, który instalujesz.</p>
+  <p>Blokadzie wystarcza jedna informacja: <strong>nazwa pakietu aplikacji, która jest na wierzchu</strong> — na przykład <code>com.instagram.android</code>. Nie potrzebuje treści ekranu, wpisywanego tekstu ani haseł, bo o taki dostęp po prostu nie prosi w swojej konfiguracji.</p>
+  <p>Jak to sprawdzić przed instalacją? Otwórz politykę prywatności aplikacji i poszukaj sekcji o usłudze dostępności. Jeżeli nie napisano tam wprost, jaki zakres danych jest odczytywany, to jest powód do ostrożności. <a href="prywatnosc.html">Naszą politykę prywatności</a> napisaliśmy właśnie pod tym kątem.</p>
+
+  <h2 id="granice">Czego żadna blokada na Androidzie nie zrobi</h2>
+  <p>To najważniejsza część tego tekstu i część, którą większość poradników pomija. <strong>Na prywatnym telefonie nie istnieje blokada, której właściciel nie może zdjąć.</strong> Android świadomie oddaje ostatnie słowo użytkownikowi, i dobrze, że tak jest.</p>
+  <p>Konkretnie, każda blokada oparta na usłudze dostępności przestaje działać, gdy:</p>
+  <ul>
+    <li>wyłączysz usługę dostępności w ustawieniach telefonu,</li>
+    <li>użyjesz <strong>wymuś zatrzymanie</strong> na aplikacji blokującej,</li>
+    <li>użyjesz <strong>wyczyść pamięć</strong> — na telefonach Samsung system usuwa wtedy całe uprawnienie i trzeba nadać je od nowa,</li>
+    <li>odinstalujesz aplikację blokującą.</li>
+  </ul>
+  <p>Programy, które obiecują blokadę „nie do obejścia", albo mówią o telefonach służbowych zarządzanych przez firmę, albo mijają się z prawdą. Uczciwe podejście jest inne: blokada ma <strong>wspierać Twoje postanowienie, a nie zastępować je</strong>. Jej wartość leży w tych kilku sekundach zwłoki, a nie w niemożliwości obejścia.</p>
+  <p>Warto też sprawdzić, czy aplikacja mówi wprost, kiedy przestała pilnować. Jeśli po wyłączeniu uprawnienia dalej wyświetla, że wszystko działa, wprowadza Cię w błąd w najgorszym możliwym momencie.</p>
+
+  <h2 id="wybor">Jak wybrać rozwiązanie dla siebie</h2>
+  <ul>
+    <li><strong>Chcesz po prostu mniej czasu w mediach społecznościowych</strong> — zacznij od Cyfrowej równowagi. Nic nie instalujesz i w tydzień zobaczysz, czy dzienny limit Ci wystarcza.</li>
+    <li><strong>Rozprasza Cię telefon w pracy albo przy nauce</strong> — tryb skupienia z harmonogramem załatwia sprawę lepiej niż limit dzienny.</li>
+    <li><strong>Odruch wraca mimo limitów</strong> — potrzebujesz czegoś, co wejdzie w sam moment sięgnięcia i da Ci sekundę na decyzję. Tu zaczyna się miejsce dla aplikacji zewnętrznych.</li>
+  </ul>
+
+  <h2 id="modlitwa">Blokowanie aplikacji a chwila modlitwy</h2>
+  <p>Większość blokad stawia ścianę: „nie wolno, wróć jutro". Ściana działa dopóty, dopóki jej nie zburzysz — a zburzyć ją można w dwa dotknięcia.</p>
+  <p><strong>Modlitwa</strong> podchodzi do tego inaczej. Zamiast odmowy wstawia zaproszenie: zanim otworzysz aplikację, która pochłania Ci czas, pojawia się krótka modlitwa. Odmawiasz ją — i masz dostęp. Kilkadziesiąt sekund zamiast zakazu.</p>
+  <p>Różnica jest praktyczna, nie tylko duchowa. Zakaz prowokuje do obchodzenia. Chwila zatrzymania daje to, o co naprawdę chodzi: <strong>świadomą decyzję zamiast odruchu</strong>. A przy okazji te kilkadziesiąt sekund idzie na coś, co ma wartość samo w sobie.</p>
+  <p>W aplikacji jest też <a href="modlitewnik.html">modlitewnik offline z 26 modlitwami</a>, słowo na dziś i licznik dni z rzędu. Blokowanie aplikacji, modlitewnik i codzienne zaproszenie są bezpłatne.</p>
+
+  <h2 id="pytania">Częste pytania</h2>
+
+  <div class="pytania">
+    <details>
+      <summary>Jak zablokować aplikacje na telefonie z Androidem?</summary>
+      <div class="odp">
+        <p>Masz trzy drogi: wbudowana Cyfrowa równowaga z licznikami czasu, tryb skupienia, albo aplikacja zewnętrzna korzystająca z usługi dostępności. Pierwsze dwie są darmowe i systemowe, ale działają w dziennych limitach. Trzecia daje więcej kontroli nad tym, co dzieje się w momencie otwarcia aplikacji.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Czy blokowanie aplikacji wymaga uprawnień administratora?</summary>
+      <div class="odp">
+        <p>Nie. Blokady dostępne w Google Play opierają się na usłudze dostępności, którą włączasz sam w ustawieniach telefonu. Nie wymagają roota ani uprawnień administratora urządzenia.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Czy da się zablokować aplikacje tak, żeby nie dało się tego obejść?</summary>
+      <div class="odp">
+        <p>Nie na zwykłym, prywatnym telefonie. Właściciel urządzenia zawsze może wyłączyć usługę dostępności, użyć wymuszenia zatrzymania albo wyczyścić pamięć aplikacji. Blokada jest wsparciem dla postanowienia, a nie zamkiem, którego nie da się otworzyć.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Czy blokada aplikacji czyta zawartość ekranu?</summary>
+      <div class="odp">
+        <p>Zależy od aplikacji. Usługa dostępności potrafi udostępnić dużo danych, ale program dostaje tylko to, o co poprosi w swojej konfiguracji. Blokadzie wystarcza nazwa pakietu aplikacji na wierzchu, na przykład <code>com.instagram.android</code>. Warto sprawdzić w polityce prywatności, o jaki zakres prosi konkretny program.</p>
+      </div>
+    </details>
+  </div>
+
+</div>
+
+<section class="pas zloto">
+  <div class="wrap zacheta">
+    <svg class="krzyz" aria-hidden="true"><use href="#i-krzyz"></use></svg>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dblokowanie%26utm_content%3Dstopka"><svg class="play" aria-hidden="true"><use href="#i-play"></use></svg>Pobierz z Google Play</a>
+    <p class="cta-sub">Za darmo · tylko Android 8.0 lub nowszy · bez kont, bez reklam</p>
+  </div>
+</section>
+
+</main>
+
+<div class="wrap">
+  <footer>
+    <span>Dev AS Company</span>
+    <a href="./">Strona główna</a>
+    <a href="modlitewnik.html">Modlitewnik</a>
+    <a href="prywatnosc.html">Polityka prywatności</a>
+    <a href="mailto:devas.app.company@gmail.com">Kontakt</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  if (!document.documentElement.classList.contains('js')) return;
+  var straznik = document.querySelector('.straznik');
+  var pasek = document.querySelector('.pasek');
+  if (straznik && pasek) {
+    new IntersectionObserver(function (wpisy) {
+      pasek.classList.toggle('odklejony', !wpisy[0].isIntersecting);
+    }).observe(straznik);
+  }
+})();
+</script>
+
+</body>
+</html>

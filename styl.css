@@ -391,6 +391,56 @@ th, td {
 th { font-weight: 600; color: var(--ink); white-space: nowrap; }
 td { color: var(--ink-soft); }
 
+/* ---- spis treści na stronach poradnikowych ---- */
+.spis {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--r);
+  padding: 18px 24px;
+  margin: 26px 0 36px;
+  box-shadow: var(--cien);
+}
+.spis-tytul {
+  margin: 0 0 8px; font-size: 12.5px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold);
+}
+.spis ul { margin: 0; padding-left: 1.1em; color: var(--ink-soft); }
+.spis li { margin-bottom: 5px; }
+.spis .ile { margin-left: 6px; font-size: 13px; color: var(--ink-faint); font-variant-numeric: lining-nums; }
+
+/* ---- pojedyncza modlitwa ---- */
+.modlitwa {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  padding: 20px 24px 22px;
+  margin: 0 0 14px;
+  box-shadow: var(--cien);
+}
+.modlitwa h3 { margin: 0 0 2px; font-size: 23px; }
+.czas { margin: 0 0 14px; font-size: 13px; color: var(--ink-faint); font-variant-numeric: lining-nums; }
+.tekst p {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.tekst p:last-child { margin-bottom: 0; }
+.tekst.brak p { font-family: var(--body); font-size: 15.5px; color: var(--ink-faint); font-style: italic; }
+
+/* ---- karty poradników na stronie głównej ---- */
+.poradniki { display: grid; gap: 14px; margin-top: 24px; }
+@media (min-width: 44rem) { .poradniki { grid-template-columns: repeat(2, 1fr); } }
+a.dar { display: block; text-decoration: none; color: inherit; }
+a.dar h3 { color: var(--ink); }
+a.dar .wiecej {
+  display: inline-block; margin-top: 12px;
+  font-size: 15px; font-weight: 600; color: var(--gold);
+}
+
 /* ---- odslanianie przy przewijaniu ---- */
 .straznik { position: absolute; top: 0; left: 0; width: 1px; height: 1px; }
 

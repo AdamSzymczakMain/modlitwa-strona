@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Modlitwa — blokada aplikacji, które kradną Ci czas</title>
-<meta name="description" content="Blokuje wybrane aplikacje, dopóki się nie pomodlisz. Modlitewnik offline, słowo na dziś, passa modlitewna. Za darmo na Androida.">
-<meta property="og:title" content="Modlitwa — blokada aplikacji">
+<title>Modlitwa — blokowanie aplikacji i modlitewnik na Androida</title>
+<meta name="description" content="Blokowanie aplikacji, dopóki się nie pomodlisz, i modlitewnik offline z 26 modlitwami po polsku. Na Androida, za darmo, bez kont i reklam.">
+<meta property="og:title" content="Modlitwa — blokowanie aplikacji i modlitewnik offline">
 <meta property="og:description" content="Zanim otworzysz aplikację, która kradnie Ci czas — poświęć minutę na modlitwę.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://modlitwa.app/">
@@ -18,6 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FAF7F0" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#12132C" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://modlitwa.app/">
 <link rel="icon" href="img/icon_512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +38,17 @@
   "isAccessibleForFree": true,
   "author": { "@type": "Organization", "name": "Dev AS Company" },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PLN" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Modlitwa",
+  "alternateName": "Modlitwa — blokowanie aplikacji i modlitewnik",
+  "url": "https://modlitwa.app/",
+  "inLanguage": "pl",
+  "publisher": { "@type": "Organization", "name": "Dev AS Company", "url": "https://modlitwa.app/" }
 }
 </script>
 <script type="application/ld+json">
@@ -222,7 +234,7 @@
         <div class="dar szeroki">
           <svg class="ikonka" aria-hidden="true"><use href="#i-ksiega"></use></svg>
           <h3>Modlitewnik offline</h3>
-          <p>22 modlitwy: pacierz, akty, modlitwy poranne i wieczorne, modlitwy maryjne, plus rozpiski różańca i Koronki do Miłosierdzia Bożego. Wszystko działa bez internetu.</p>
+          <p>22 modlitwy: pacierz, akty, modlitwy poranne i wieczorne, modlitwy maryjne, plus rozpiski różańca i Koronki do Miłosierdzia Bożego. Wszystko działa bez internetu — <a href="modlitewnik.html">zobacz pełne teksty modlitw</a>.</p>
         </div>
         <div class="dar">
           <svg class="ikonka" aria-hidden="true"><use href="#i-slowo"></use></svg>
@@ -317,6 +329,26 @@
     </div>
   </section>
 
+  <section class="pas tint">
+    <div class="wrap-szeroki">
+      <h2 class="odslon">Warto przeczytać</h2>
+      <div class="poradniki grupa">
+        <a class="dar" href="blokowanie-aplikacji.html">
+          <svg class="ikonka" aria-hidden="true"><use href="#i-tarcza"></use></svg>
+          <h3>Blokowanie aplikacji na Androidzie</h3>
+          <p>Trzy sposoby blokowania, jak działa usługa dostępności i czego żadna blokada nie zrobi.</p>
+          <span class="wiecej">Czytaj poradnik →</span>
+        </a>
+        <a class="dar" href="modlitewnik.html">
+          <svg class="ikonka" aria-hidden="true"><use href="#i-ksiega"></use></svg>
+          <h3>Modlitewnik — 26 modlitw po polsku</h3>
+          <p>Pacierz, akty, modlitwy poranne i wieczorne, maryjne, różaniec i Koronka. Pełne teksty.</p>
+          <span class="wiecej">Otwórz modlitewnik →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="pas noc">
     <div class="wrap koniec grupa">
       <svg class="krzyz" aria-hidden="true"><use href="#i-krzyz"></use></svg>
@@ -331,6 +363,8 @@
 <div class="wrap">
   <footer>
     <span>Dev AS Company</span>
+    <a href="blokowanie-aplikacji.html">Blokowanie aplikacji</a>
+    <a href="modlitewnik.html">Modlitewnik</a>
     <a href="prywatnosc.html">Polityka prywatności</a>
     <a href="mailto:devas.app.company@gmail.com">Kontakt</a>
   </footer>
