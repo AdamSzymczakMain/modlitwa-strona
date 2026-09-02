@@ -73,6 +73,14 @@
   ]
 }
 </script>
+<script>
+  /* Klasa js wygasza elementy jeszcze przed pierwszym malowaniem.
+     Bez skryptu i przy ograniczonym ruchu strona zostaje w pelni widoczna. */
+  if ('IntersectionObserver' in window &&
+      !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.className += ' js';
+  }
+</script>
 </head>
 <body>
 
@@ -111,7 +119,15 @@
       <path d="M10 21.2a2.2 2.2 0 0 0 4 0"/>
     </g>
   </symbol>
+  <symbol id="i-play" viewBox="0 0 24 24">
+    <path fill="#00D3FF" d="M3.1 2.3c-.2.3-.3.7-.3 1.2v17c0 .5.1.9.3 1.2l.1.1 9.5-9.5v-.3L3.2 2.2l-.1.1z"/>
+    <path fill="#FFCE00" d="m15.9 15.6-3.3-3.3v-.3l3.3-3.3.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2-.1.1z"/>
+    <path fill="#FF3A44" d="m16 15.5-3.4-3.4-9.5 9.6c.4.4 1 .4 1.7.1L16 15.5z"/>
+    <path fill="#00E677" d="M16 8.7 4.8 2.4c-.7-.4-1.3-.3-1.7.1l9.5 9.5L16 8.7z"/>
+  </symbol>
 </svg>
+
+<div class="straznik" aria-hidden="true"></div>
 
 <a class="pomin" href="#tresc">Przejdź do treści</a>
 
@@ -121,7 +137,7 @@
       <img src="img/icon_512.png" alt="" width="30" height="30">
       Modlitwa
     </a>
-    <a class="cta maly" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dpasek">Pobierz</a>
+    <a class="cta maly" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dpasek"><svg class="play" aria-hidden="true"><use href="#i-play"></use></svg>Pobierz</a>
   </div>
 </header>
 
@@ -129,17 +145,17 @@
 
   <section class="sztandar">
     <div class="wrap-szeroki sztandar-siatka">
-      <div class="sztandar-tresc">
+      <div class="sztandar-tresc grupa">
         <p class="marka">Aplikacja na Androida</p>
         <h1>Blokuje aplikacje, dopóki się nie pomodlisz</h1>
         <p class="lead">Wybierasz, co Cię pochłania — Instagram, TikTok, YouTube. Zanim to otworzysz, pojawia się zaproszenie do krótkiej modlitwy. Dopiero potem masz dostęp.</p>
         <div class="sztandar-akcja">
-          <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dhero">Pobierz z Google Play</a>
+          <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dhero"><svg class="play" aria-hidden="true"><use href="#i-play"></use></svg>Pobierz z Google Play</a>
           <p class="cta-sub">Za darmo · tylko Android 8.0 lub nowszy · bez kont, bez reklam</p>
         </div>
       </div>
 
-      <div class="telefon" role="img" aria-label="Ekran blokady w aplikacji: Zatrzymaj się na chwilę, z przyciskiem Pomódl się, aby odblokować">
+      <div class="telefon odslon" role="img" aria-label="Ekran blokady w aplikacji: Zatrzymaj się na chwilę, z przyciskiem Pomódl się, aby odblokować">
         <div class="ekran" aria-hidden="true">
           <svg class="krzyz"><use href="#i-krzyz"></use></svg>
           <p class="ekran-tytul">Zatrzymaj się na chwilę</p>
@@ -152,7 +168,7 @@
   </section>
 
   <section class="pas noc">
-    <div class="wrap">
+    <div class="wrap grupa">
       <h2>Znasz to</h2>
       <p class="wiodacy">Sięgasz po telefon, żeby sprawdzić godzinę. Odkładasz go czterdzieści minut później i nie umiesz powiedzieć, co się w międzyczasie stało.</p>
       <p>Postanowienie, że dziś będzie inaczej, wytrzymuje do pierwszego odruchu. Bo odruch nie pyta o pozwolenie — po prostu otwiera aplikację.</p>
@@ -162,8 +178,8 @@
 
   <section class="pas">
     <div class="wrap-szeroki">
-      <h2>Jak to działa</h2>
-      <div class="kroki">
+      <h2 class="odslon">Jak to działa</h2>
+      <div class="kroki grupa">
         <div class="krok">
           <span class="n">1</span>
           <h3>Wybierasz aplikacje</h3>
@@ -185,8 +201,8 @@
 
   <section class="pas tint">
     <div class="wrap-szeroki">
-      <h2>Jak wygląda</h2>
-      <div class="zrzuty">
+      <h2 class="odslon">Jak wygląda</h2>
+      <div class="zrzuty grupa">
         <img src="img/screenshot_1.webp" alt="Ekran modlitwy z tekstem i przyciskiem Amen" width="540" height="960" loading="lazy" decoding="async">
         <img src="img/screenshot_2.webp" alt="Zablokowana aplikacja i zaproszenie do modlitwy" width="540" height="960" loading="lazy" decoding="async">
         <img src="img/screenshot_3.webp" alt="Słowo na dziś i passa modlitewna" width="540" height="960" loading="lazy" decoding="async">
@@ -196,8 +212,8 @@
 
   <section class="pas">
     <div class="wrap-szeroki">
-      <h2>Co dostajesz za darmo</h2>
-      <div class="dary">
+      <h2 class="odslon">Co dostajesz za darmo</h2>
+      <div class="dary grupa">
         <div class="dar">
           <svg class="ikonka" aria-hidden="true"><use href="#i-tarcza"></use></svg>
           <h3>Blokowanie aplikacji</h3>
@@ -228,16 +244,16 @@
   </section>
 
   <section class="pas zloto">
-    <div class="wrap zacheta">
+    <div class="wrap zacheta grupa">
       <svg class="krzyz" aria-hidden="true"><use href="#i-krzyz"></use></svg>
-      <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dsrodek">Pobierz z Google Play</a>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dsrodek"><svg class="play" aria-hidden="true"><use href="#i-play"></use></svg>Pobierz z Google Play</a>
       <p class="cta-sub">Za darmo · tylko Android 8.0 lub nowszy</p>
     </div>
   </section>
 
   <section class="pas">
     <div class="wrap">
-      <div class="szczery">
+      <div class="szczery odslon">
         <h2>Czego aplikacja nie zrobi</h2>
         <p>Blokada opiera się na usłudze dostępności Androida. Jeśli wyłączysz ją w ustawieniach telefonu albo użyjesz „wymuś zatrzymanie” lub „wyczyść pamięć”, ochrona przestanie działać do czasu, aż włączysz ją z powrotem — na telefonach Samsung system usuwa wtedy całe uprawnienie.</p>
         <p>Aplikacja pokaże wprost, że nie pilnuje, i nie będzie udawać, że potrafi się temu przeciwstawić.</p>
@@ -248,7 +264,7 @@
 
   <section class="pas">
     <div class="wrap">
-      <div class="szczery darmo">
+      <div class="szczery darmo odslon">
         <h2>Modlitwa jest za darmo</h2>
         <p>Wszystko powyżej jest i pozostanie bezpłatne. Nie sprzedajemy modlitwy.</p>
         <p>Opcjonalny <strong>Modlitwa Plus</strong> dokłada mocniejsze narzędzia samokontroli: krótkie okna dostępu zamiast odblokowania do północy, harmonogramy, natychmiastową blokadę, Tryb Mszy i tryb „napisz intencję”. Kosztuje od 11,99 zł miesięcznie, a wszystkie warianty i ceny zobaczysz w aplikacji, zanim cokolwiek zapłacisz.</p>
@@ -258,8 +274,8 @@
 
   <section class="pas tint">
     <div class="wrap">
-      <h2>Pytania</h2>
-      <div class="pytania">
+      <h2 class="odslon">Pytania</h2>
+      <div class="pytania grupa">
 
         <details>
           <summary>Czy aplikacja czyta mój ekran?</summary>
@@ -302,11 +318,11 @@
   </section>
 
   <section class="pas noc">
-    <div class="wrap koniec">
+    <div class="wrap koniec grupa">
       <svg class="krzyz" aria-hidden="true"><use href="#i-krzyz"></use></svg>
       <h2>Zatrzymaj się na chwilę</h2>
       <p>Za darmo, bez kont, bez reklam.</p>
-      <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dstopka">Pobierz z Google Play</a>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=pl.modlitwa.modlitwa&amp;referrer=utm_source%3Dmodlitwa.app%26utm_medium%3Dstrona%26utm_campaign%3Dlanding%26utm_content%3Dstopka"><svg class="play" aria-hidden="true"><use href="#i-play"></use></svg>Pobierz z Google Play</a>
     </div>
   </section>
 
@@ -319,6 +335,39 @@
     <a href="mailto:devas.app.company@gmail.com">Kontakt</a>
   </footer>
 </div>
+
+<script>
+(function () {
+  if (!document.documentElement.classList.contains('js')) return;
+
+  var cele = [].slice.call(document.querySelectorAll('.grupa > *, .odslon'));
+  cele.forEach(function (el) {
+    var rodzenstwo = cele.filter(function (x) { return x.parentElement === el.parentElement; });
+    el.style.setProperty('--opoznienie', rodzenstwo.indexOf(el) * 70 + 'ms');
+  });
+
+  var zadzialal = false;
+  var pokaz = function (el) { el.classList.add('widoczny'); };
+  var oko = new IntersectionObserver(function (wpisy, obserwator) {
+    zadzialal = true;
+    wpisy.forEach(function (w) {
+      if (w.isIntersecting) { pokaz(w.target); obserwator.unobserve(w.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  cele.forEach(function (el) { oko.observe(el); });
+
+  /* bezpiecznik: gdyby obserwator nigdy nie zadzialal, tresc i tak sie pokaze */
+  setTimeout(function () { if (!zadzialal) cele.forEach(pokaz); }, 2500);
+
+  var straznik = document.querySelector('.straznik');
+  var pasek = document.querySelector('.pasek');
+  if (straznik && pasek) {
+    new IntersectionObserver(function (wpisy) {
+      pasek.classList.toggle('odklejony', !wpisy[0].isIntersecting);
+    }).observe(straznik);
+  }
+})();
+</script>
 
 </body>
 </html>
