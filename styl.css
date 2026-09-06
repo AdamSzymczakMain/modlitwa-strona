@@ -113,6 +113,11 @@ a { color: var(--gold); }
 .play { width: 19px; height: 19px; flex: none; }
 .cta.maly .play { width: 16px; height: 16px; }
 .cta-sub { font-size: 14.5px; color: var(--ink-faint); margin: 0; }
+.cta-ios { background: var(--surface); color: var(--ink); border: 1px solid var(--rule); text-align: center; justify-content: center; }
+#ios { scroll-margin-top: 80px; }
+.ios-karta .marka { margin-bottom: 12px; }
+.ios-karta .cta { max-width: 100%; text-align: center; justify-content: center; }
+.ios-pomoc { font-size: 14.5px; margin-top: 16px; overflow-wrap: anywhere; }
 
 /* ---- pominięcie nawigacji ---- */
 .pomin {
